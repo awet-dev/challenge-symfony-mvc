@@ -11,8 +11,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LearningController extends AbstractController
 {
-    private string $name;
+    private string $name = 'unknown';
     private SessionInterface $session;
+
 
     public function __construct(SessionInterface $session)
     {
@@ -42,12 +43,17 @@ class LearningController extends AbstractController
     public function changeMyName(): Response {
         if (!empty($_POST['name'])) {
             $this->name = $_POST['name'];
-        }  else {
-            $this->name = 'unknown';
+
+            return $this->render('learning/changeMyName.twig', [
+                'name' => $this->name
+            ]);
+        } else {
+            return $this->render('learning/showMyName.twig', [
+                'name' => "enter your name"
+            ]);
         }
-        return $this->render('learning/changeMyName.twig', [
-            'name' => $this->name
-        ]);
+
+
     }
 
 
