@@ -6,10 +6,11 @@ aboutMe:
     path: about-me
     controller: App\Controller\LearningController::aboutMe
 
-form:
+showName:
     path: form
     controller: App\Controller\LearningController::showName
 
-showName:
-    path: showName
-    controller: App\Controller\LearningController::changeName
+changeMyName:
+    path: changeMyName
+    controller: App\Controller\LearningController::changeMyName
+
