@@ -1,0 +1,7 @@
+aboutMe:
+    path: about-me
+    controller: App\Controller\LearningController::aboutMe
+
+test:
+    path: test
+    controller: App\Controller\LearningController::test
