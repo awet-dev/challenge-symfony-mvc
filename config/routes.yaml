@@ -1,16 +1,6 @@
-index:
-    path: /
-    controller: App\Controller\LearningController::index
+#index:
+#    path: /
+#    controller: App\Controller\LearningController::index
 
-aboutMe:
-    path: about-me
-    controller: App\Controller\LearningController::aboutMe
 
-showName:
-    path: form
-    controller: App\Controller\LearningController::showName
-
-changeMyName:
-    path: changeMyName
-    controller: App\Controller\LearningController::changeMyName
 
